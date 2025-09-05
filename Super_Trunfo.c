@@ -10,6 +10,8 @@ int população1;
 float area1;
 float pib1;
 int pontost1;
+float densidade1;
+float pibpc1;
 
 //variaveis da segunda carta
 char estado2[3];
@@ -19,6 +21,8 @@ int população2;
 float area2;
 float pib2;
 int pontost2;
+float densidade2;
+float pibpc2;
 
 //inserção dos dados da primeira carta
 printf("Vamos começar, todos os dados que irá informar a seguir serão da primeira carta e devem se tratar da mesma cidade.\n\n");
@@ -35,7 +39,7 @@ scanf("%s", &cidade1);
 printf("Informe o número de habitantes da cidade:");
 scanf(" %d", &população1);
 
-printf("Informe a área da cidade em quilômetros quadrados da cidade:");
+printf("Informe a área da cidade em Km² da cidade:");
 scanf(" %f", &area1);
 
 printf("Informe o Produto Interno Bruto da cidade:");
@@ -52,15 +56,15 @@ printf("Informe uma letra de 'A' a 'H' representando um dos oito estados para se
 scanf(" %s", &estado2);
 
 printf("Informe um número de 01 a 04 para o código da segunda carta:");
-scanf(" %s", &codcarta2);
+scanf("%s", &codcarta2);
 
 printf("Informe o nome da cidade:");
-scanf(" %s", &cidade2);
+scanf("%s", &cidade2);
 
 printf("Informe o número de habitantes da cidade:");
 scanf(" %d", &população2);
 
-printf("Informe a área da cidade em quilômetros quadrados da cidade:");
+printf("Informe a área da cidade em Km² da cidade:");
 scanf(" %f", &area2);
 
 printf("Informe o Produto Interno Bruto da cidade:");
@@ -69,27 +73,41 @@ scanf(" %f", &pib2);
 printf("Informe a quantidade de pontos turísticos na cidade:");
 scanf(" %d", &pontost2);
 printf("\n");
+
+// Calculo de Densidade e Pib per capta
+
+densidade1 = (float)(população1 / area1);
+pibpc1 = (float)(pib1 / população1);
+densidade2 = (float)(população2 / area2);
+pibpc2 = (float)(pib2 / população2);
+
 //demonstração da carta 1 
 
 printf("Carta 1\n");
 printf("Estado:%s\n", estado1);
 printf("Código:%s\n", codcarta1);
-printf("Cidade:%s\n", cidade1);
+printf("Nome da Cidade:%s\n", cidade1);
 printf("População: %d\n", população1);
 printf("Área: %.2f Km²\n", area1);
-printf("PIB: %.2f bilhões\n", pib1);
-printf("Pontos turísticos: %d\n", pontost1);
+printf("PIB: %.2f bilhões de reais\n", pib1);
+printf("Número de Pontos Turísticos: %d\n", pontost1);
+printf("Densidade Populacional: %.2f\n", densidade1);
+printf("PIB per Capita: %.2f\n", pibpc1);
 
 //demonstração da carta 2 
 
 printf("\n Carta 2\n");
 printf("Estado: %s\n", estado2);
 printf("Código: %s\n", codcarta2);
-printf("Cidade: %s\n", cidade2);
+printf("Nome da Cidade: %s\n", cidade2);
 printf("População: %d\n", população2);
 printf("Área: %.2f Km²\n", area2);
-printf("PIB: %.2f bilhões\n", pib2);
-printf("Pontos turísticos: %d\n", pontost2);
+printf("PIB: %.2f bilhões de reais\n", pib2);
+printf("Número de Pontos Turísticos: %d\n", pontost2);
+printf("Densidade Populacional: %.2f\n", densidade2);
+printf("PIB per Capita: %.2f\n", pibpc2);
+
+
 
 return 0;
 
