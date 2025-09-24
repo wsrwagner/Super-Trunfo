@@ -81,6 +81,7 @@ pibpc1 = (float)(pib1 / população1);
 densidade2 = (float)(população2 / area2);
 pibpc2 = (float)(pib2 / população2);
 
+
 //demonstração da carta 1 
 
 printf("Carta 1\n");
@@ -91,8 +92,8 @@ printf("População: %d\n", população1);
 printf("Área: %.2f Km²\n", area1);
 printf("PIB: %.2f bilhões de reais\n", pib1);
 printf("Número de Pontos Turísticos: %d\n", pontost1);
-printf("Densidade Populacional: %.2f\n", densidade1);
-printf("PIB per Capita: %.2f\n", pibpc1);
+printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+printf("PIB per Capita: %.2f reais\n", pibpc1);
 
 //demonstração da carta 2 
 
@@ -104,8 +105,15 @@ printf("População: %d\n", população2);
 printf("Área: %.2f Km²\n", area2);
 printf("PIB: %.2f bilhões de reais\n", pib2);
 printf("Número de Pontos Turísticos: %d\n", pontost2);
-printf("Densidade Populacional: %.2f\n", densidade2);
-printf("PIB per Capita: %.2f\n", pibpc2);
+printf("Densidade Populacional: %.2f\ hab/km²\n", densidade2);
+printf("PIB per Capita: %.2f reais\n", pibpc2);
+
+//Comparação de população
+if (população1 > população2)
+{printf("Carta 1 venceu!!! Sua quantidade de habitantes de %d é maior do que a Carta 2\n", população1);
+} else {
+    printf("Carta 2 venceu!!! Sua quantidade de habitantes de %d é maior do que a Carta 1\n", população2);
+}
 
 
 
