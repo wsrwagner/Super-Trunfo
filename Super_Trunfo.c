@@ -115,6 +115,13 @@ if (população1 > população2)
     printf("Carta 2 venceu!!! Sua quantidade de habitantes de %d é maior do que a Carta 1\n", população2);
 }
 
+//Comparação Densidade populacional
+if (densidade1 < densidade2)
+{printf("Carta 1 venceu!!! Sua Densidade Populacional: %.2f\ hab/km² é menor do que a Carta 2\n", densidade1);
+} else {
+    printf("Carta 2 venceu!!! Sua Densidade Populacional: %.2f\ hab/km² é menor do que a Carta 1\n", densidade2);
+}
+
 
 
 return 0;
